@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.files {
+    width: 500px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.folder, .file {
+    cursor: pointer;
+    padding: 5px;
+    align-items: center;
+    list-style: none;
+}
+
+.folder::before {
+    content: "📁"; 
+    margin-right: 8px;
+}
+
+.file::before {
+    content: "📄"; 
+    margin-right: 5px;
+}
+
+.nested {
+    display: none;
+    padding-left: 20px;
+}
+
+.folder.open > .nested {
+    display: block; 
+}

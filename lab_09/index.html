@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <ul class="files">
+            <li class="folder" onclick="toggleFolder(this)">Films
+                <ul class="nested">
+                    <li class="file">Iron Man.avi</li>
+                    <li class="folder" onclick="toggleFolder(this)">Fantasy
+                        <ul class="nested">
+                            <li class="file">The Lords of the Rings.avi</li>
+                            <li class="folder" onclick="openFile(event, 'File is empty')">New folder 1</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="folder" onclick="toggleFolder(this)">Documents
+                <ul class="nested">
+                    <li class="file" onclick="openFile(event, 'File is empty')">New document</li>
+                </ul>
+            </li>
+        </ul>
+
+    </body>
+    <script src="script.js"></script>
+    </html>
